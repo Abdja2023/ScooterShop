@@ -1,0 +1,1046 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "ubuntu";
+  font-size: 14px;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 5rem;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+header ul {
+  list-style: none;
+}
+nav {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin-left: 10rem;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+}
+
+nav .main-ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+}
+nav .secondary-ul {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  /* padding: 2rem; */
+  border: solid 1px black;
+  gap: 1rem;
+  top: 0;
+  height: 10rem;
+  width: 7rem;
+  justify-content: space-around;
+  align-items: center;
+}
+header .buttons-ul {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .bars {
+  display: none;
+}
+
+header .main-ul .LogIn-responsive,
+header .main-ul .SignUp-responsive {
+  display: none;
+}
+.buttons-ul li {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+
+.buttons-ul .signup {
+  background-color: #474747;
+  border-radius: 5px;
+}
+.buttons-ul .signup a {
+  color: #fff;
+}
+
+.firstScreen {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 110vh;
+  /* max-height: fit-content; */
+  margin-bottom: 3rem;
+  background-repeat: no-repeat;
+  right: 0;
+  background-size: 50% 80%;
+  background-position: right top 2rem;
+
+  background-image: url("/Ressources/firstScreenIllustration.png");
+}
+
+/* .firstScreen .LeftSide,
+.firstScreen .RightSide {
+  width: 50%;
+} */
+
+.firstScreen .LeftSide {
+  min-height: 45rem;
+  max-height: fit-content;
+  width: 70%;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.LeftSide .main-h2,
+.LeftSide .main-h2 span {
+  font-size: clamp(2.5rem, 4.5rem, 5.5rem);
+  color: #42454a;
+}
+.LeftSide .main-h2 {
+  font-weight: lighter;
+  position: relative;
+}
+
+.LeftSide .main-h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5rem;
+  width: 35%;
+  height: 0.3rem;
+  background-color: #42454a;
+  left: 0;
+}
+.LeftSide .main-h2 span {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.LeftSide .secondary-h4 {
+  width: 70%;
+  color: #42454a;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.LeftSide .buyNow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  height: 5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* border: solid 1px black; */
+}
+
+.LeftSide .buyNow a {
+  text-decoration: none;
+  /* color: #42454a; */
+  display: flex;
+  flex-direction: row;
+  width: 12rem;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* .LeftSide .buyNow a:hover {
+  background-color: #cecece;
+} */
+.LeftSide .BuyLink {
+  display: flex;
+  flex-direction: row;
+
+  /* width: 10%; */
+  background-color: gainsboro;
+  height: 100%;
+}
+.LeftSide .BuyLink i {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  background-color: #42454a;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.3rem;
+}
+.LeftSide .BuyLink span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  font-size: 1.3rem;
+  color: #42454a;
+}
+
+.LeftSide .WatchVideo {
+  justify-content: space-between;
+}
+
+.LeftSide .WatchVideo span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  text-align: left;
+  color: #42454a;
+  font-weight: 500;
+}
+
+.LeftSide .WatchVideo img {
+  width: 4.5rem;
+}
+.RightSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 30%;
+  height: 25%;
+  align-self: flex-end;
+  bottom: 0rem;
+  right: 1rem;
+}
+
+.RightSide span {
+  font-family: "Calistoga";
+  font-size: 10rem;
+  /* position: absolute; */
+  height: 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+.RightSide div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.RightSide div .fa-chevron-left {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px 0px 0 30px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+}
+
+.RightSide div .fa-chevron-right {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0px 30px 30px 0px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+}
+.RightSide div button:hover {
+  cursor: pointer;
+  background-color: #42454a;
+  color: white;
+  border: #42454a 1px solid;
+}
+
+.featureBoxs {
+  width: 100%;
+  min-height: 30vh;
+  max-height: fit-content;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.featureBoxs .Box {
+  min-width: 12rem;
+  height: 10rem;
+  padding: 1rem;
+  border-radius: 8px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.featureBoxs .Box p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.featureBoxs .Box p span {
+  font-weight: bold;
+}
+.featureBoxs .Box .featureName {
+  font-weight: lighter;
+}
+
+.secondScreen,
+.thirdScreen,
+.sixthScreen,
+.seventhScreen,
+.eighthScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 3rem 0;
+  padding: 1rem;
+}
+
+.secondScreen .screenTitle,
+.thirdScreen .screenTitle,
+.fourthScreen .screenTitle,
+.fifthScreen .screenTitle,
+.sixthScreen .screenTitle,
+.seventhScreen .screenTitle,
+.eighthScreen .screenTitle {
+  font-size: clamp(1rem, 3rem, 3.2rem);
+  margin: 2rem 0 1.5rem 0;
+}
+
+.secondScreen .underTitle,
+.thirdScreen .underTitle,
+.fourthScreen .underTitle,
+.fifthScreen .underTitle,
+.sixthScreen .underTitle,
+.eighthScreen .underTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.secondScreen .illustation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+.secondScreen .Content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.secondScreen .illustration img {
+  width: 75%;
+}
+
+.secondScreen .features {
+  height: 85%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1.5em;
+  width: 40%;
+}
+
+.secondScreen .Content div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.secondScreen .Content div div img {
+  width: 3rem;
+}
+
+.thirdScreen img {
+  width: 75%;
+  height: 40rem;
+}
+.fourthScreen,
+.fifthScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 150vh;
+  max-height: fit-content;
+  margin: 3rem 0;
+  padding: 1rem;
+}
+.fourthScreen .Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.fourthScreen .Content .golf-bag-rock {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.fourthScreen .Content .shopping-rack {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 1fr;
+}
+.fourthScreen .Content .golf-bag-rock .illustration,
+.fourthScreen .Content .shopping-rack .illustration {
+  width: 80%;
+}
+.fourthScreen .Content .golf-bag-rock .left h2,
+.fourthScreen .Content .shopping-rack .right h2 {
+  font-size: clamp(20px, 40px, 60px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.fourthScreen .Content .golf-bag-rock .left,
+.fourthScreen .Content .shopping-rack .right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.fourthScreen .Content .golf-bag-rock .left .items,
+.fourthScreen .Content .shopping-rack .right .items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70%;
+}
+.fourthScreen .Content .golf-bag-rock .left .items .item,
+.fourthScreen .Content .shopping-rack .right .items .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1rem;
+}
+.fourthScreen .Content .golf-bag-rock .left .items .item img,
+.fourthScreen .Content .shopping-rack .right .items .item img {
+  width: 2.5rem;
+}
+
+.fourthScreen .moreAccessories {
+  margin: 5rem;
+  font-size: 1.8rem;
+  border: 2px solid #42454a;
+  color: #42454a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  font-weight: 500;
+}
+
+.fifthScreen .Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(10, 5rem);
+  width: 75%;
+  height: 70%;
+  /* border: 1px solid black; */
+  justify-items: space-between;
+  gap: 1rem;
+}
+.fifthScreen .Content img {
+  width: 100%;
+}
+
+.fifthScreen .Content img:hover {
+  transform: scale(1.05);
+  transition: all ease-out 0.3s;
+}
+.fifthScreen .Content .bestQuality {
+  grid-row: 1/ 4;
+  grid-column: 2/3;
+}
+.fifthScreen .Content .scooter {
+  grid-row: 3/ 7;
+  grid-column: 1 /2;
+}
+.fifthScreen .Content .parts {
+  grid-row: 6/ 10;
+  grid-column: 2/3;
+}
+
+.fifthScreen .Content .moreParts {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 15rem;
+  grid-column: 1/2;
+  grid-row: 8/10;
+  justify-content: space-between;
+  /* align-content: center; */
+  align-items: center;
+}
+
+.fifthScreen .Content .moreParts a {
+  text-align: center;
+  text-decoration: none;
+  color: #42454a;
+  font-size: 1.4rem;
+  padding: 1rem;
+  width: 100%;
+  border: 2px solid #42454a;
+  height: 4rem;
+  border-radius: 10px;
+}
+
+.fifthScreen .Content .moreParts a:hover {
+  background-color: #42454a;
+  color: #fff;
+  border: none;
+  transform: scale(1.03);
+  transition: all ease-in 0.3s;
+}
+
+.sixthScreen .Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45rem;
+  background-image: url("/Ressources/sixthScreen-background.png");
+  background-size: 60% 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.sixthScreen .Content .colors {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  bottom: -1rem;
+}
+
+.sixthScreen .Content .colors img {
+  width: 20%;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+.sixthScreen .Content .colors img:hover {
+  transform: scale(1.05);
+  transition: all ease 0.2s;
+}
+
+.seventhScreen .Testimonials {
+  width: 62.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow-x: hidden;
+  height: 25rem;
+  align-items: center;
+}
+
+.seventhScreen .Testimonials .Card {
+  min-width: 20rem;
+  height: 21rem;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2.5rem;
+  text-align: justify;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.seventhScreen .Testimonials .Card .testifier {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: flex-start;
+  gap: 0.5rem;
+}
+.seventhScreen .Testimonials .Card .testifier img {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  width: 3rem;
+}
+
+.seventhScreen .Testimonials .Card .testifier h4,
+span {
+  grid-column: 2/3;
+}
+
+.seventhScreen .Testimonials .Card .testifier h4 {
+  font-size: 1.2rem;
+}
+
+.seventhScreen .Testimonials .Cone .ione,
+.seventhScreen .Testimonials .Cone .itwo,
+.seventhScreen .Testimonials .Cone .ithree,
+.seventhScreen .Testimonials .Cone .ifour {
+  -webkit-text-fill-color: rgb(255, 255, 0);
+}
+.seventhScreen .Testimonials .Ctwo .ione,
+.seventhScreen .Testimonials .Ctwo .itwo,
+.seventhScreen .Testimonials .Ctwo .ithree,
+.seventhScreen .Testimonials .Ctwo .ifour,
+.seventhScreen .Testimonials .Ctwo .ifive {
+  -webkit-text-fill-color: rgb(255, 255, 0);
+}
+.seventhScreen .buttons {
+  width: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.seventhScreen .buttons button {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 2px solid #42454a;
+  color: #42454a;
+}
+.seventhScreen .buttons button:hover {
+  background-color: #42454a;
+  border: none;
+  color: #fff;
+}
+
+.eighthScreen {
+  min-height: 40vh;
+  max-height: 45vh;
+}
+
+.eighthScreen form {
+  margin: 2rem;
+  width: 35%;
+  height: 5rem;
+  /* background-col:or: gray; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.eighthScreen input {
+  height: 4.5rem;
+  width: 55%;
+  padding: 0.9rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  font-size: 1.15rem;
+}
+.eighthScreen input:hover,
+.eighthScreen input:focus {
+  transform: scale(1.05);
+  transition: all ease 0.2s;
+}
+.eighthScreen button {
+  height: 4.5rem;
+  width: 35%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: #42454a;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: lighter;
+}
+
+.eighthScreen button:hover {
+  transform: scale(1.05);
+  transition: all ease 0.2s;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  background-color: #42454a;
+  position: relative;
+}
+
+footer .bike {
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  align-self: flex-end;
+  width: 40%;
+}
+
+footer .items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 60%;
+  height: 13rem;
+  margin-top: -12rem;
+}
+
+footer .items ul .title-li {
+  margin-bottom: 4rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+footer .items ul li {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+footer .items li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: lighter;
+}
+
+footer .items li:hover {
+  text-decoration: underline;
+}
+footer .items ul li div {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .items ul li div a {
+  color: #42454a;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .items ul li div a:hover {
+  cursor: pointer;
+  transform: none;
+}
+footer span:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 1270px) {
+  .LeftSide .buyNow {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .LeftSide .buyNow {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .LeftSide .buyNow {
+    width: 75%;
+  }
+  .seventhScreen .Testimonials {
+    width: 41.2rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  header {
+    position: relative;
+    z-index: 999;
+  }
+  header .bars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #42454a;
+    font-size: 2rem;
+  }
+
+  nav .main-ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: -17.5rem;
+    right: 0;
+    gap: 2rem;
+    background-color: #42454a;
+    color: #fff;
+    padding: 1rem;
+    z-index: -999;
+    transform: scale(0);
+    transform-origin: right top;
+  }
+  header .buttons-ul {
+    display: none;
+  }
+
+  header a {
+    color: #fff;
+  }
+
+  header .main-ul .LogIn-responsive,
+  header .main-ul .SignUp-responsive {
+    display: flex;
+  }
+
+  .LeftSide .buyNow {
+    width: 83%;
+  }
+
+  .LeftSide .main-h2::after {
+    bottom: -3rem;
+  }
+
+  .fifthScreen .Content {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .fifthScreen .Content .bestQuality {
+    grid-row: 1/ 2;
+    grid-column: 1/2;
+  }
+
+  .fifthScreen .Content .scooter {
+    grid-row: 2/ 3;
+    grid-column: 1 /2;
+  }
+
+  .fifthScreen .Content .parts {
+    grid-row: 3/ 4;
+    grid-column: 1/2;
+  }
+  .fifthScreen .Content .moreParts {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .thirdScreen {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .firstScreen {
+    background-size: 100% 100%;
+  }
+
+  .secondScreen {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .fourthScreen .Content .golf-bag-rock {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 75%;
+    border: 2px solid #42454a;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .fifthScreen .Content .moreParts {
+    width: 90%;
+  }
+
+  .fourthScreen .Content .shopping-rack {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: dense;
+    width: 75%;
+    border: 2px solid #42454a;
+    border-radius: 10px;
+  }
+  .fourthScreen .Content .shopping-rack .illustration {
+    justify-self: center;
+  }
+
+  .firstScreen .LeftSide {
+    background-color: rgba(197, 197, 197, 0.568);
+    width: 100%;
+    background-size: 100% 100%;
+    padding: 1rem;
+  }
+
+  .RightSide {
+    display: none;
+  }
+
+  .secondScreen .Content {
+    flex-direction: column;
+  }
+
+  .secondScreen .illustration {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .secondScreen .features {
+    width: 70%;
+  }
+
+  .fourthScreen .moreAccessories {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .sixthScreen .Content {
+    background-size: 75% 95%;
+  }
+
+  .sixthScreen .Content .colors {
+    width: 75%;
+  }
+
+  .eighthScreen form {
+    width: 50%;
+  }
+  footer {
+    height: 30rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .bike {
+    display: none;
+  }
+  footer .items {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 600px) {
+  .firstScreen {
+    height: 92vh;
+  }
+  .LeftSide .main-h2,
+  .LeftSide .main-h2 span {
+    font-size: 3.5rem;
+  }
+  .LeftSide .secondary-h4 {
+    font-size: 1rem;
+  }
+  .LeftSide .buyNow {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .seventhScreen .Testimonials {
+    width: 20.5rem;
+  }
+
+  .eighthScreen form {
+    width: 75%;
+  }
+  .secondScreen .screenTitle,
+  .thirdScreen .screenTitle,
+  .fourthScreen .screenTitle,
+  .fifthScreen .screenTitle,
+  .sixthScreen .screenTitle,
+  .seventhScreen .screenTitle,
+  .eighthScreen .screenTitle {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .secondScreen .underTitle,
+  .thirdScreen .underTitle,
+  .fourthScreen .underTitle,
+  .fifthScreen .underTitle,
+  .sixthScreen .underTitle,
+  .eighthScreen .underTitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .fourthScreen .Content .golf-bag-rock .left h2,
+  .fourthScreen .Content .shopping-rack .right h2 {
+    font-size: 25px;
+    margin: 1rem;
+  }
+  .thirdScreen {
+    height: 55vh;
+  }
+
+  .fourthScreen .Content .shopping-rack {
+    padding: 1rem;
+  }
+
+  .sixthScreen .Content {
+    background-size: 100% 85%;
+  }
+  .sixthScreen .Content .colors {
+    width: 95%;
+  }
+  .sixthScreen .Content {
+    height: 35rem;
+  }
+}
+/* @media screen and (max-width: 900px) {
+} */
